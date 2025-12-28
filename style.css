@@ -1,6 +1,8 @@
 /* GENERAL */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+
 
 * {
   margin: 0;
@@ -167,13 +169,27 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
+
 }
 
 .section__pic-container {
   display: flex;
-  height: 400px;
-  width: 400px;
+  height: 600px;
+  width: 600px;
   margin: auto 0;
+  justify-content: center;
+}
+
+.pic{
+  position: relative;
+  height: 350;
+  width: auto;
+  
+}
+
+.title_1{
+  color: #E0338F;
+  font-family: "Caveat", cursive;
 }
 
 .section__text {
@@ -316,6 +332,46 @@ section {
 
 /* EXPERIENCE SECTION */
 
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 50px); /* ✅ forces multiple columns */
+  gap: 14px;
+
+  /* 🔑 THIS IS THE KEY FIX */
+  width: 100%;
+  justify-content: center;
+}
+
+.tools-grid span {
+  width: 50px;
+  height: 50px;
+  border: 2px solid #333;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-weight: 600;
+}
+
+.double-space {
+  line-height: 2;
+  word-spacing: 2rem;
+}
+
+
+.color{
+  /* color: #E0338F; */
+  background-color: #f7c3de;
+}
+
+.color1{
+  background-color: #f89dca;
+}
+
+
+
 #experience {
   position: relative;
 }
@@ -383,6 +439,12 @@ article .icon {
 /* CONTACT */
 
 #contact {
+  position:static;             /* مهم */
+  background-image: url("assets/a.png");
+  background-size: 80% auto;
+  height:100rem;
+  background-position: center 12%;
+  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -390,6 +452,7 @@ article .icon {
 }
 
 .contact-info-upper-container {
+
   display: flex;
   justify-content: center;
   border-radius: 2rem;
@@ -398,14 +461,17 @@ article .icon {
   background: (250, 250, 250);
   margin: 2rem auto;
   padding: 0.5rem;
+  
 }
 
 .contact-info-container {
+  
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   margin: 1rem;
+  
 }
 
 .contact-info-container p {
@@ -429,4 +495,8 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+.env{
+  overflow: hidden;
 }
